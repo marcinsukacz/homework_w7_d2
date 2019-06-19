@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Currency Converter</title>
+    <script src="./js/bundle.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+
+    <h1>Currency Converter</h1>
+
+    <div id="app">
+
+        <label for="money_enter">Money to convert:</label>
+        <input id="money_enter" type="number" name="myMoney" v-model="myMoney" />
+
+
+        <label for="currency_select">Select a Currency:</label>
+        <select id="currency_select" type="number" v-model="selectedCurrency">
+          <option v-for="(value, name) in currencieRates.rates" :value="value">
+          {{name}}: {{ value }}</option>
+        </select>
+
+        <h2>Going to have: {{ moneyConverted }}<h2>
+
+
+
+
+
+    </div>
+
+
+
+  </body>
+</html>
